@@ -1,0 +1,45 @@
+body {
+      margin: 0; 
+      height: 100vh;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      user-select: none;
+      overflow: hidden;
+    }
+    .item {
+      width: 150px; 
+      height: 150px; 
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .item:active {
+      transform: scale(0.85);
+    }
+    #score {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 22px;
+      color: #333;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+
+    .bubble {
+      background: radial-gradient(circle at 30% 30%, #f7c59f, #f06e3e);
+      box-shadow: 0 0 15px 5px rgba(240,110,62,0.7);
+    }
+    .coin {
+      background: radial-gradient(circle at 30% 30%, #ffe066, #f9a602);
+      box-shadow: 0 0 20px 8px rgba(249,166,2,0.6);
+    }
+    .bomb {
+      background: radial-gradient(circle at 30% 30%, #333, #111);
+      box-shadow: 0 0 25px 10px rgba(0,0,0,0.6);
+    }
