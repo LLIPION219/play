@@ -1,13 +1,41 @@
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Клік бульбашка</title>
-   <link rel="stylesheet" href="style.css" />
-  </head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Чіл-клік</title>
+<link rel="stylesheet" href="style.css" />
+</head>
 <body>
 
-<div id="score">Балів: 0</div>
- <script src="script.js"></script>
+<div id="game-container">
+  <div id="bubble" class="item bubble" title="Клікни на мене!"></div>
+  <div id="coin" class="item coin" title="Монетка +2 бали"></div>
+  <div id="bomb" class="item bomb" title="Бомба -5 балів"></div>
+
+  <div id="scoreboard">
+    <div>Рівень: <span id="level">1</span></div>
+    <div>Бали: <span id="score">0</span></div>
+    <div>Монети: <span id="coins">0</span></div>
+    <div>Життя: <span id="lives">1</span></div>
+    <button id="shop-btn">Магазин</button>
+    <button id="pause-btn">Пауза</button>
+  </div>
+</div>
+
+<!-- Магазин -->
+<div id="shop" class="hidden">
+  <h2>Магазин</h2>
+  <button class="buy-btn" data-item="freeze" data-cost="30">❄️ Замороження часу (5 сек) - 30 монет</button>
+  <button class="buy-btn" data-item="double" data-cost="50">✖️2 Множник балів (10 сек) - 50 монет</button>
+  <button class="buy-btn" data-item="star" data-cost="20">⭐ Бонусна зірка (+10 балів, 10 монет) - 20 монет</button>
+  <button id="close-shop">Закрити</button>
+</div>
+
+<!-- Меню паузи -->
+<div id="pause-menu" class="hidden">
+  <h2>Гра на паузі</h2>
+  <button id="resume-btn">Продовжити</button>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
